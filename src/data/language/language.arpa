@@ -1,0 +1,118 @@
+
+\data\
+ngram 1=26
+ngram 2=76
+ngram 3=3
+
+\1-grams:
+-0.6412121	</s>
+-99	<s>	-1.158432
+-0.9852768	<unk>
+-1.888367	automatycznie	-0.489425
+-1.888367	czterdzieści	-0.489425
+-1.888367	dwadzieścia	-0.489425
+-1.888367	dziesięć	-0.489425
+-1.888367	dziewięćdziesiąt	-0.489425
+-1.135039	kartę	-0.1932206
+-2.365488	manualnie	-0.188395
+-1.888367	najszybciej	-0.489425
+-1.888367	najwolniej	-0.489425
+-1.135039	oba	-0.1932206
+-1.888367	osiemdziesiąt	-0.489425
+-1.888367	pięćdziesiąt	-0.489425
+-1.135039	procesor	-0.1932206
+-1.888367	siedemdziesiąt	-0.489425
+-1.888367	sto	-0.489425
+-1.888367	sześćdziesiąt	-0.489425
+-1.888367	szybciej	-0.489425
+-1.888367	trzydzieści	-0.489425
+-0.6579178	ustaw	-1.147463
+-1.888367	wolniej	-0.489425
+-2.365488	wyjście	-0.188395
+-1.888367	zero	-0.489425
+-1.888367	średnio	-0.489425
+
+\2-grams:
+-1.748188	<s> manualnie
+-0.04061785	<s> ustaw	0
+-1.748188	<s> wyjście
+-0.1249387	automatycznie </s>
+-0.1249387	czterdzieści </s>
+-0.1249387	dwadzieścia </s>
+-0.1249387	dziesięć </s>
+-0.1249387	dziewięćdziesiąt </s>
+-1.531479	kartę automatycznie
+-1.531479	kartę czterdzieści
+-1.531479	kartę dwadzieścia
+-1.531479	kartę dziesięć
+-1.531479	kartę dziewięćdziesiąt
+-1.531479	kartę najszybciej
+-1.531479	kartę najwolniej
+-1.531479	kartę osiemdziesiąt
+-1.531479	kartę pięćdziesiąt
+-1.531479	kartę siedemdziesiąt
+-1.531479	kartę sto
+-1.531479	kartę sześćdziesiąt
+-1.531479	kartę szybciej
+-1.531479	kartę trzydzieści
+-1.531479	kartę wolniej
+-1.531479	kartę zero
+-1.531479	kartę średnio
+-0.30103	manualnie </s>
+-0.1249387	najszybciej </s>
+-0.1249387	najwolniej </s>
+-1.531479	oba automatycznie
+-1.531479	oba czterdzieści
+-1.531479	oba dwadzieścia
+-1.531479	oba dziesięć
+-1.531479	oba dziewięćdziesiąt
+-1.531479	oba najszybciej
+-1.531479	oba najwolniej
+-1.531479	oba osiemdziesiąt
+-1.531479	oba pięćdziesiąt
+-1.531479	oba siedemdziesiąt
+-1.531479	oba sto
+-1.531479	oba sześćdziesiąt
+-1.531479	oba szybciej
+-1.531479	oba trzydzieści
+-1.531479	oba wolniej
+-1.531479	oba zero
+-1.531479	oba średnio
+-0.1249387	osiemdziesiąt </s>
+-0.1249387	pięćdziesiąt </s>
+-1.531479	procesor automatycznie
+-1.531479	procesor czterdzieści
+-1.531479	procesor dwadzieścia
+-1.531479	procesor dziesięć
+-1.531479	procesor dziewięćdziesiąt
+-1.531479	procesor najszybciej
+-1.531479	procesor najwolniej
+-1.531479	procesor osiemdziesiąt
+-1.531479	procesor pięćdziesiąt
+-1.531479	procesor siedemdziesiąt
+-1.531479	procesor sto
+-1.531479	procesor sześćdziesiąt
+-1.531479	procesor szybciej
+-1.531479	procesor trzydzieści
+-1.531479	procesor wolniej
+-1.531479	procesor zero
+-1.531479	procesor średnio
+-0.1249387	siedemdziesiąt </s>
+-0.1249387	sto </s>
+-0.1249387	sześćdziesiąt </s>
+-0.1249387	szybciej </s>
+-0.1249387	trzydzieści </s>
+-0.5019448	ustaw kartę
+-0.5019448	ustaw oba
+-0.5019448	ustaw procesor
+-0.1249387	wolniej </s>
+-0.30103	wyjście </s>
+-0.1249387	zero </s>
+-0.1249387	średnio </s>
+
+\3-grams:
+-0.5019448	<s> ustaw kartę
+-0.5019448	<s> ustaw oba
+-0.5019448	<s> ustaw procesor
+
+\end\

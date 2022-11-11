@@ -1,0 +1,17 @@
+szybciej
+wolniej
+najszybciej
+najwolniej
+średnio
+automatycznie
+zero
+dziesięć
+dwadzieścia
+trzydzieści
+czterdzieści
+pięćdziesiąt
+sześćdziesiąt
+siedemdziesiąt
+osiemdziesiąt
+dziewięćdziesiąt
+sto
