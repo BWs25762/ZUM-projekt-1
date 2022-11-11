@@ -21,9 +21,3 @@ def get_config() -> dict:
     with open(config_path, "r") as f:
         config = json.load(f)
     return config
-
-
-if __name__ == "__main__":
-    print(get_root_dir())
-    print(get_data_dir())
-

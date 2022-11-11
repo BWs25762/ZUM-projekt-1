@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import time
@@ -6,11 +7,17 @@ from typing import List
 from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
 
 from command_recorder import CommandRecorder
-from fan_controller.fan import RegisterList, build_fans_from_config, Fan, Modes
+from fan_controller.fan import RegisterList, build_fans_from_config, Fan, Modes, MockRegisterList
 from fan_controller.view import ViewController
 from language_decoder_builder import LanguageDecoderBuilder
-from utils import get_data_dir, get_config
+from utils import get_data_dir
 
+
+def get_config():
+    config_path = os.path.join(get_data_dir(), "mock_config.json")
+    with open(config_path, "r") as f:
+        config = json.load(f)
+    return config
 
 logging.basicConfig(level=os.environ.get("LOG_LEVEL", "INFO"), force=True)
 
@@ -50,7 +57,7 @@ class MainController:
     def __init__(self):
         self.config = get_config()
         self.command_recorder = self._build_command_decoder(self.config)
-        self.register_list = RegisterList(ec_address=self.config["ec_address"])
+        self.register_list = MockRegisterList()
         self.fans = build_fans_from_config(self.config, self.register_list)
         self.view_controller = ViewController()
 
@@ -171,6 +178,8 @@ class MainController:
                 out += self.view_controller.get_fan_representation(fan)
             os.system("clear")
             print(out)
+
+            print(self.fans[0].read_temperature())
             print(previous_command)
             command = self.command_recorder.record_command()
             print(command)

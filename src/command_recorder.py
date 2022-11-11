@@ -5,7 +5,6 @@ from timeit import default_timer
 import numpy as np
 from pyctcdecode import BeamSearchDecoderCTC
 from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
-from matplotlib import pyplot as plt
 
 logger = logging.getLogger(__name__)
 
@@ -37,19 +36,18 @@ class CommandRecorder:
         max_volume = 1.0
         total_audio = np.array([[0.]])
         record_wait_time = self.initial_record_wait_time
-        print("recording command...")
+        print("nagrywanie komendy...")
         start = default_timer()
         while max_volume > self.volume_threshold and total_time < self.max_command_time:
             command_slice = sd.rec(int(record_wait_time * self.fs), samplerate=self.fs, channels=1)
             sd.wait()
-            logger.info("recorder slice!")
             total_audio = np.concatenate((total_audio, command_slice))
             max_volume = command_slice.max()
-            logger.info(f"max volume: {max_volume} / {self.volume_threshold}")
+            logger.info(f"max: {max_volume} / {self.volume_threshold}")
             total_time += self.record_wait_time
             record_wait_time = self.record_wait_time
-            logger.info(f"total time: {total_time:2}s")
-        print(f"done recording! {(default_timer()-start):2}s")
+            logger.info(f"czas trwania: {total_time:2}s")
+        print(f"koniec nagrywania! {(default_timer()-start):2}s")
         total_audio = np.reshape(total_audio, total_audio.shape[0])
         return total_audio
 

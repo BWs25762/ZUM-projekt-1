@@ -9,15 +9,15 @@
             }],
             "write": [{
                 "register": 148,
-                "min": 255,
-                "max": 0
+                "min": 0,
+                "max": 255
             }],
             "read": [{
-                "register": 149,
-                "min": 255,
-                "max": 85
+                "register": 148,
+                "min": 0,
+                "max": 255
             }],
-            "temp": 168
+            "temp": 0
         },
         {
             "name": "GPU",
@@ -32,27 +32,27 @@
             }],
             "write": [{
                 "register": 151,
-                "min": 255,
-                "max": 29
+                "min": 0,
+                "max": 255
             },{
-                "register": 155,
-                "min": 255,
-                "max": 0
+                "register": 151,
+                "min": 0,
+                "max": 255
             }],
             "read": [{
-                "register": 152,
-                "min": 255,
-                "max": 65
+                "register": 151,
+                "min": 0,
+                "max": 255
             },{
-                "register": 156,
-                "min": 255,
-                "max": 66
+                "register": 151,
+                "min": 0,
+                "max": 255
             }],
-            "temp": 171
+            "temp": 0
         }
     ],
-    "max_temp": 110,
-    "ec_address": "/sys/kernel/debug/ec/ec0/io",
+    "max_temp": 255,
+    "ec_address": "",
     "volume_threshold": 0.7,
     "record_wait_time": 2,
     "initial_record_wait_time": 4,

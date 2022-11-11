@@ -6,8 +6,6 @@ import numpy as np
 
 
 class ViewController:
-    # def __init__(self, fans: List[Fan]):
-    #     pass
 
     @staticmethod
     def represent_value(val: int, resolution: int):
@@ -41,39 +39,6 @@ class ViewController:
             out += ''.join(i)
             out += '\n'
         return out
-
-    # def make_graph(self, history: 'list[int]', register: FanRegister, registers_list):
-    #     @dataclass
-    #     class Graphed:
-    #         history: "list[int]"
-    #         graph: str
-    #
-    #     columns: int = os.get_terminal_size().columns
-    #     history.append(register.read(registers_list))
-    #     hist_len = len(history)
-    #     if hist_len > columns:
-    #         history = history[(hist_len - columns):]
-    #     graph = str(self.serialize_history(history, register.min, register.max))
-    #     return Graphed(history, graph)
-
-    # def get_summary(self, registers_list):
-    #     out = ""
-    #
-    #     out += self.name + '\n'
-    #     out += f"mode: {self.get_mode(registers_list)}\n"
-    #     graphed_read = self.make_graph(self.__read_history, self.__read, registers_list)
-    #     self.__read_history = graphed_read.history
-    #     speed_raw = self.__read_history[-1]
-    #     speed_percent = int((self.map_value(speed_raw, self.__read.min, self.__read.max) / self.RESOLUTION) * 100)
-    #     out += f'fan speed: {speed_percent}%\n'
-    #     out += graphed_read.graph + '\n'
-    #
-    #     graphed_temp = self.make_graph(self.__temp_history, self.__temp, registers_list)
-    #     self.__temp_history = graphed_temp.history
-    #     out += f'temperature: {self.__temp_history[-1]}°C\n'
-    #     out += graphed_temp.graph + '\n'
-    #
-    #     return out
 
     def get_fan_representation(self, fan: Fan):
         out = f"{fan.name}\n" \

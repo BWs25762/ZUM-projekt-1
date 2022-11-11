@@ -1,9 +1,7 @@
-import json
 from enum import Enum
 from typing import List
-
-
-EC_ADDRESS = str("/sys/kernel/debug/ec/ec0/io")
+from timeit import default_timer as timer
+from math import sin
 
 
 class RegisterList:
@@ -27,11 +25,35 @@ class RegisterList:
     def write_changes(self):
         registers_string = ' '.join(self.registers)
         registers_bytes = bytes.fromhex(registers_string)
-        with open(EC_ADDRESS, "wb") as f:
+        with open(self.ec_address, "wb") as f:
             f.write(registers_bytes)
 
     def update(self):
         self.registers = self._read_registers()
+
+
+class MockRegisterList:
+    def _read_registers(self) -> List[int]:
+        return [0 for _ in range(255)]
+
+    def __init__(self):
+        self.registers: List[int] = self._read_registers()
+
+    def read_register(self, address: int) -> int:
+        if address == 0:
+            t = int(255 * (sin(timer() / 10) + 1) / 2)
+            print(f"t: {t}")
+            return t
+        return self.registers[address]
+
+    def write_register(self, value: int, address: int) -> None:
+        self.registers[address] = value
+
+    def write_changes(self):
+        pass
+
+    def update(self):
+        pass
 
 
 class Register:
