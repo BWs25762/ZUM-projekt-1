@@ -2,6 +2,7 @@
 Głosowe sterowanie wiatrakami
 
 ## Instrukcja
+#### wymaga "ngram-count"!
 
 Ekran główny aplikacji pokazuje temperaturę oraz moc dla każdego skonfigurowanego wiatraka. 
 W przypadku zmockowanej aplikacji wykres temperatury to sin(t) a prędkość wiatraka to ostatnie
